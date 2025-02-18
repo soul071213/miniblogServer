@@ -7,5 +7,5 @@ exports.add=async(board_id,content)=>{
 
 exports.list=async(board_id)=>{
     const query=`select * from comment where board_id = ?`;
-    return await pool.query(query,board_id);
+    return await pool.query(query,[board_id]);
 }

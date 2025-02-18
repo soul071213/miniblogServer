@@ -3,8 +3,8 @@ const router = express.Router();
 
 const commnetController = require('./api/comment/controller');
 
-router.post('/commnet/add',commnetController.add);
-router.get('/commnet/list',commnetController.list);
+router.post('/comment/add',commnetController.add);
+router.get('/comment/list',commnetController.list);
 
 const boardController = require('./api/board/controller');
 

@@ -12,5 +12,5 @@ exports.list=async()=>{
 
 exports.detail=async(id)=>{
     const query = `select * from board where id=?`;
-    return await pool.query(query,id);
+    return await pool.query(query,[id]);
 }
