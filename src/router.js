@@ -4,7 +4,7 @@ const router = express.Router();
 const commnetController = require('./api/comment/controller');
 
 router.post('/comment/add',commnetController.add);
-router.get('/comment/list',commnetController.list);
+router.post('/comment/list',commnetController.list);
 
 const boardController = require('./api/board/controller');
 
