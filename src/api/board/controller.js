@@ -46,6 +46,5 @@ exports.detail=async(req,res)=>{
     const {id}=req.body;
 
     const detailList = await repository.detail(id);
-
     res.json(detailList);
 }

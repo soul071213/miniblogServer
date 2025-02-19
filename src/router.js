@@ -10,6 +10,6 @@ const boardController = require('./api/board/controller');
 
 router.post('/board/add',boardController.add);
 router.get('/board/list',boardController.list);
-router.get('/board/detail',boardController.detail);
+router.post('/board/detail',boardController.detail);
 
 module.exports= router;
