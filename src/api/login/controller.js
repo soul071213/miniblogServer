@@ -20,7 +20,7 @@ exports.login= async (req,res)=>{
         if(!isMatch) return res.status(400).json({message:"비밀번호가 일치 하지 않습니다."});
 
         //JWT 발급
-        const accessToken = jwt.sign({user_id:users.user_id},process.env.SECRETKEY,{expiresIn:'15m'});
+        const accessToken = jwt.sign({user_id:users.user_id,password:password},process.env.SECRETKEY,{expiresIn:'15m'});
         const refreshToken = jwt.sign({user_id:users.user_id},process.env.SECRETKEY,{expiresIn:'7d'});
 
         // Refresh Token을 쿠키에 저장

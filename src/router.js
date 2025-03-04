@@ -16,7 +16,7 @@ router.post('/board/detail',authMiddleware,boardController.detail);
 const loginController = require('./api/login/controller');
 
 router.post('/login',loginController.login);
-router.post('logout',authMiddleware,loginController.logout);
+router.post('/logout',loginController.logout);
 
 const signController = require('./api/signup/controller');
 
@@ -24,6 +24,6 @@ router.post('/signUp',signController.signUp);
 
 const userController = require('./api/user/controller');
 
-router.post('/user',userController.user);
+router.post('/user',authMiddleware,userController.user);
 
 module.exports= router;
