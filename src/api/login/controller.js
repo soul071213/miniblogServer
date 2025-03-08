@@ -39,3 +39,7 @@ exports.logout= async(req,res)=>{
 exports.log=async(req,res)=>{
     res.json({log:"로그 확인"});
 }
+
+exports.isLogin=async(req,res)=>{
+    res.json({isLogin:'true'});
+}
