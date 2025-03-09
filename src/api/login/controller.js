@@ -35,3 +35,7 @@ exports.logout= async(req,res)=>{
     res.clearCookie("refreshToken");
     res.json({message:"로그아웃 성공"});
 }
+
+exports.log=async(req,res)=>{
+    res.json({log:"로그 확인"});
+}
